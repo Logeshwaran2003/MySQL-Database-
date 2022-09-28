@@ -1,0 +1,22 @@
+# MySQL-Database
+show databases;
+create database std;
+use std;
+create table student(std_rno int primary key auto_increment,std_name varchar(20),yr int,gen varchar(16),dept varchar(10));
+describe student;
+insert into student values(412620106014,'logesh',3,'M','ECE');
+insert into student values(412620106027,'Naveen',3,'M','CSE');
+select* from student;
+drop table student;
+create table std_address(dr_no int primary key auto_increment,city varchar(20) not null,district varchar(10) not null unique,state varchar(20) not null);
+describe std_address;
+insert into std_address values(27,'velur','namakkal',tamilnadu);
+insert into std_address (dr_no,city, district,state)value(2,'logesh',palamedu, madurai, tamilnadu);
+insert into std_address (dr_no,city, district,state)value(3,'syed',Karaikudi, Trichy, Tamilnadu);
+select*from std_address;
+update student set name_='sanju' where std_rno=412610206027;
+                            
+alter table student rename column std_name to name;
+alter table student add column address varchar(50) not null;
+							
+	
